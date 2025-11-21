@@ -11,6 +11,7 @@ body {
 
 :root {
     --primary-bg: #0a0a0f;
+    --secondary-bg: #1a1a1f;
     --primary-text: #ffffff;
     --secondary-text: #a0a0a8;   
     --accent-color: #029232; 
@@ -135,4 +136,89 @@ nav {
 
 .nav-links a:hover {
     color: var(--primary-text);
+}
+
+.projects {
+    padding: 120px 20px;
+    background: var(--secondary-bg);
+}
+
+.projects-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.projects h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--primary-text);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.project-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    overflow: hidden; 
+    transition: var(--transition);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-glow);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    background: var(--secondary-bg); 
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.project-content {
+    padding: 30px;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--primary-text);
+}
+
+.project-content p {
+    color: var(--secondary-text);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.project-links {
+    display: flex;
+    gap: 15px;
+}
+
+.project-link {
+    padding: 8px 16px;
+    background: rgba(255,255,255,0.1);
+    color: var(--primary-text);
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 1px solid var(--glass-border);
+}
+
+.project-link:hover {
+    background: var(--gradient-primary);
+    border-color: transparent;
+    color: white;
 }
