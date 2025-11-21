@@ -14,6 +14,9 @@ body {
     --primary-text: #ffffff;
     --secondary-text: #a0a0a8;   
     --accent-color: #029232; 
+
+    --gradient-primary: linear-gradient(135deg, #08ca49 0%, #0d8f29 100%);
+    --shadow-glow: 0 8px 32px rgba(8, 68, 11, 0.3);
 }
 
 body {
@@ -35,6 +38,12 @@ body {
     font-weight: 800;
     margin-bottom: 20px;
     color: var(--accent-color);
+
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
 }
 
 .intro-subtitle {
@@ -57,4 +66,13 @@ body {
     background: var(--accent-color);
     color: white;
     display: inline-block;
+
+    background: var(--gradient-primary);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
 }
